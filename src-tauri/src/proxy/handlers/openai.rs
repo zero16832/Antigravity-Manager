@@ -1753,7 +1753,7 @@ pub async fn handle_images_generations(
                                         status_code,
                                         None,
                                         &err_text,
-                                        Some("dall-e-3"),
+                                        Some("gemini-3-pro-image"),
                                     )
                                     .await;
                                 continue; // Retry loop
@@ -1882,7 +1882,7 @@ pub async fn handle_images_generations(
     Ok((
         StatusCode::OK,
         [
-            ("X-Mapped-Model", "dall-e-3"),
+            ("X-Mapped-Model", "gemini-3-pro-image"),
             ("X-Account-Email", email_header.as_str()),
         ],
         Json(openai_response),
@@ -2157,7 +2157,7 @@ pub async fn handle_images_edits(
                                         status_code,
                                         None,
                                         &err_text,
-                                        Some("dall-e-3"),
+                                        Some("gemini-3-pro-image"),
                                     )
                                     .await;
                                 continue; // Retry loop
@@ -2273,7 +2273,7 @@ pub async fn handle_images_edits(
     Ok((
         StatusCode::OK,
         [
-            ("X-Mapped-Model", "dall-e-3"),
+            ("X-Mapped-Model", "gemini-3-pro-image"),
             ("X-Account-Email", email_header.as_str()),
         ],
         Json(openai_response),
